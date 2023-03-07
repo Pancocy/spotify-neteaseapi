@@ -1,0 +1,75 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				// "navigationBarTitleText": "Home",
+				// "navigationBarBackgroundColor": "#fff",
+				// "navigationBarTextStyle": "black"
+				// "enablePullDownRefresh": false
+				"app-plus": {
+					"scrollIndicator": "none"
+				}
+			}                                    
+		},                                       
+		{                                        
+			"path": "pages/index/search",         
+			"style": {                           
+				// "navigationBarTitleText": "About",
+				// "navigationBarBackgroundColor": "#fff",
+				// "navigationBarTextStyle": "black"
+				// "enablePullDownRefresh": false
+			}
+		},
+	    {
+            "path" : "pages/index/library",
+            "style" :                                                                                    
+            {
+                // "navigationBarTitleText": "",
+                // "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "fff",
+		"navigationBarTitleText": "uni-app",
+		// "navigationBarBackgroundColor": "#F8F8F8",
+		// "backgroundColor": "#000"
+		"app-plus": {
+			"titleNView":false,
+			"scrollIndicator": "none"
+		}
+	},
+	"uniIdRouter": {},
+	"tabBar": {
+			"color": "#B3B3B3", //字体颜色
+			"selectedColor": "#fff", //选中时字体颜色
+			// "borderStyle": "black", //底部的上边框线条
+			"backgroundColor": "rgba(0,0,0,0.3)", //底部背景色
+			"fontSize": "12px", //字体大小
+			"spacing": "1px", //字体到图标的距离
+			"height": "60px", //底部高
+		
+			"list": [
+				{
+					"pagePath": "pages/index/index",
+					"text": "首页",
+					"iconPath":"/static/tabIcon/home-selected.gif",
+					"selectedIconPath": "/static//tabIcon/home.gif"
+				},
+				{
+					"pagePath": "pages/index/search",
+					"text": "搜索",
+					"iconPath":"/static/tabIcon//selected-selected.gif",
+					"selectedIconPath": "/static//tabIcon/search.gif"
+				},
+				{
+					"pagePath": "pages/index/library",
+					"text": "音乐馆",
+					"iconPath":"/static/tabIcon/library-selected.gif",
+					"selectedIconPath": "/static//tabIcon/library.gif"
+				}
+			]
+	}
+}

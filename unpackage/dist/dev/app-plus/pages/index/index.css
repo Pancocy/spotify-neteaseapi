@@ -1,0 +1,97 @@
+.content-home .header[data-v-1cf27b2a] {
+  color: aliceblue;
+  box-sizing: border-box;
+  height: 120px;
+  background-image: linear-gradient(169deg, #0e0e78 10%, #000000 62%);
+  padding: 30px 10px 20px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.content-home .header .funcs ul[data-v-1cf27b2a] {
+  display: flex;
+  list-style: none;
+}
+.content-home .header .funcs ul li[data-v-1cf27b2a] {
+  width: 35px;
+  height: 35px;
+  margin-left: 20px;
+}
+.content-home .header .funcs ul li img[data-v-1cf27b2a] {
+  width: 24px;
+  height: 24px;
+}
+.content-home .swiper-pics[data-v-1cf27b2a] {
+  height: 160px;
+  background-color: aliceblue;
+}
+.content-home .swiper-pics .swiper[data-v-1cf27b2a] {
+  height: 100%;
+  background-color: black;
+}
+.content-home .swiper-pics .swiper .swiper-item[data-v-1cf27b2a] {
+  padding: 0 8px;
+  background-color: black;
+  border: none;
+}
+.content-home .swiper-pics .swiper .swiper-item img[data-v-1cf27b2a] {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+.content-home .recommend[data-v-1cf27b2a] {
+  padding-top: 15px;
+}
+.content-home .recommend ul[data-v-1cf27b2a] {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 8px;
+}
+.content-home .recommend ul li[data-v-1cf27b2a] {
+  width: 48%;
+  height: 65px;
+  background-color: #1a1a1a;
+  margin-top: 7px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: flex-start;
+}
+.content-home .recommend ul li h4[data-v-1cf27b2a] {
+  line-height: 65px;
+  color: #ffffff;
+}
+.content-home .albums[data-v-1cf27b2a] {
+  background-color: black;
+  color: aliceblue;
+  padding: 40px 8px 0 8px;
+}
+.content-home .albums .scroll-view_H[data-v-1cf27b2a] {
+  white-space: nowrap;
+  width: 100%;
+  height: 240px;
+  margin-top: 20px;
+}
+.content-home .albums .scroll-view-item_H[data-v-1cf27b2a] {
+  display: inline-block;
+  width: 45%;
+  height: 100%;
+  line-height: 100%;
+  text-align: center;
+  font-size: 0.5rem;
+  margin-right: 10px;
+}
+.content-home .albums .scroll-view-item_H img[data-v-1cf27b2a] {
+  width: 100%;
+  height: 9.375rem;
+  display: block;
+}
+.content-home .albums .scroll-view-item_H p[data-v-1cf27b2a] {
+  display: block;
+  color: #fff;
+  height: 3rem;
+  font-size: 14px;
+  line-height: 3rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}

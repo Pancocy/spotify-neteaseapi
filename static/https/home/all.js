@@ -34,3 +34,15 @@ export function getRadio(){
 		method:'GET'
 	})
 }
+
+//请求热门歌手
+export function getSingers(){
+	return myRequest({
+		url:'/api/top/artists',
+		method:'GET',
+		data:{
+			offset:0,
+			limit:15
+		}
+	})
+}

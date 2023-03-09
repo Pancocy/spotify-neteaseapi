@@ -64,6 +64,23 @@
 						</view>
 					</scroll-view>
 			</view>
+			<!-- 热门歌手 -->
+			<view class="singers">
+				<h3>热门歌手</h3>
+				<scroll-view
+				scroll-x="true" 
+				scroll-left="120" 
+				class="scroll-view-singer"
+				>
+					<view class="scroll-view-singer-item"
+						v-for="item in singerList" :key="item.id"
+					>
+					<img :src="item.picUrl" :alt="item.copywriter">
+					<p>{{item.name}}</p>
+					</view>
+				</scroll-view>
+			</view>
+		
 		</view>
 	</view>
 </template>
@@ -79,7 +96,8 @@
 		getCaroul,
 		getExplore,
 		getAlbum,
-		getRadio
+		getRadio,
+		getSingers
 	} from '../../static/https/home/all.js'
 	let time = ref('')
 	//轮播图数据
@@ -90,29 +108,29 @@
 	let albumList = ref([])
 	//电台数据
 	let radioList = ref([])
+	//热门歌手
+	let singerList = ref([])
 	onBeforeMount(() => {
 		time = new Date().toString()
-		//请求轮播图
-		getCaroul({
-			type: 2
-		}).then((res) => {
-			bannerList.value = res.data.banners
+		Promise.all([
+			//请求轮播图
+			getCaroul({type:2}),
+			//请求发现
+			getExplore(),
+			//请求歌单
+			getAlbum({limit:10}),
+			//请求电台数据
+			getRadio(),
+			//请求热门歌手
+			getSingers()
+		]).then((res)=>{
+			bannerList.value =res[0].data.banners
+			explorList.value =res[1].data.data
+			albumList.value = res[2].data.result
+			radioList.value =res[3].data.result
+			singerList.value =res[4].data.artists
 		})
-		//请求发现
-		getExplore().then((res) => {
-			explorList.value = res.data.data
-		})
-		//请求歌单
-		getAlbum({
-			limit: 10
-		}).then((res) => {
-			albumList.value = res.data.result
-		})
-		//请求电台数据
-		getRadio().then((res)=>{
-			radioList.value = res.data.result
-		})
-
+	
 	})
 	//根据事件显示不同欢迎词的方法
 	const formatDate = () => {
@@ -224,7 +242,7 @@
 					}
 				}
 			}
-			.scroll-view-item_H,.scroll-view-radio-item{
+			.scroll-view-item_H,.scroll-view-radio-item,.scroll-view-singer-item{
 				display: inline-block;
 				width: 45%;
 				height: 100%;
@@ -256,6 +274,24 @@
 							height: 350rpx;
 							display: block;
 							border-radius: 15px;
+						}
+					}
+				}
+			}
+			.singers{
+				background-color: black;
+				padding: 0px 8px;
+				.scroll-view-singer{
+					white-space: nowrap;
+					width: 100%;
+					height: 300px;
+					margin-top: 20px;
+					.scroll-view-singer-item{
+						img {
+							width: 100%;
+							height: 330rpx;
+							display: block;
+							border-radius: 50%;
 						}
 					}
 				}

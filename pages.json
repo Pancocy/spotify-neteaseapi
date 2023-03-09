@@ -34,7 +34,7 @@
 	"globalStyle": {
 		"navigationBarTextStyle": "fff",
 		"navigationBarTitleText": "uni-app",
-		// "navigationBarBackgroundColor": "#F8F8F8",
+		"navigationBarBackgroundColor": "#000000",
 		// "backgroundColor": "#000"
 		"app-plus": {
 			"titleNView":false,
@@ -46,7 +46,7 @@
 			"color": "#B3B3B3", //字体颜色
 			"selectedColor": "#fff", //选中时字体颜色
 			// "borderStyle": "black", //底部的上边框线条
-			"backgroundColor": "rgba(0,0,0,0.3)", //底部背景色
+			"backgroundColor": "black", //底部背景色
 			"fontSize": "12px", //字体大小
 			"spacing": "1px", //字体到图标的距离
 			"height": "60px", //底部高
